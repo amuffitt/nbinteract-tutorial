@@ -6,4 +6,5 @@ pandas
 xlrd
 ipympl
 nodejs
+jupyter_contrib_nbextensions
 
