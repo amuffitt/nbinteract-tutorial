@@ -1,3 +1,10 @@
 numpy
 ipywidgets
 nbinteract
+matplotlib
+pandas
+xlrd
+IPython.display
+collections
+HTML
+defaultdict
