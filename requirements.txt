@@ -6,3 +6,4 @@ pandas
 xlrd
 ipympl
 nodejs
+jupyter labextension
