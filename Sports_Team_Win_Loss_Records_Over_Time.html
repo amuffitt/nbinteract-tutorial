@@ -14307,98 +14307,16 @@ memory usage: 575.7+ KB
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/IPython/core/formatters.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, obj)</span>
-<span class="ansi-green-intense-fg ansi-bold">    343</span>             method <span class="ansi-blue-fg">=</span> get_real_method<span class="ansi-blue-fg">(</span>obj<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>print_method<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    344</span>             <span class="ansi-green-fg">if</span> method <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 345</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> method<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    346</span>             <span class="ansi-green-fg">return</span> <span class="ansi-green-fg">None</span>
-<span class="ansi-green-intense-fg ansi-bold">    347</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-10-48dfd3af29b5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">     16</span> 
+<span class="ansi-green-intense-fg ansi-bold">     17</span> <span class="ansi-red-fg">#Define funcanimation with appropriate variable inputs</span>
+<span class="ansi-green-fg">---&gt; 18</span><span class="ansi-red-fg"> </span>animator <span class="ansi-blue-fg">=</span> animation<span class="ansi-blue-fg">.</span>FuncAnimation<span class="ansi-blue-fg">(</span>fig<span class="ansi-blue-fg">,</span> draw_barchart<span class="ansi-blue-fg">,</span> frames<span class="ansi-blue-fg">=</span>range<span class="ansi-blue-fg">(</span>yearstart<span class="ansi-blue-fg">,</span> yearstop<span class="ansi-blue-fg">+</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> interval <span class="ansi-blue-fg">=</span> speed<span class="ansi-blue-fg">,</span> repeat <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> <span class="ansi-red-fg">#Call funcanimation with default &#39;jshtml&#39; format which should launch a player in browser</span>
+<span class="ansi-green-intense-fg ansi-bold">     20</span> animator
 
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/matplotlib/animation.py</span> in <span class="ansi-cyan-fg">_repr_html_</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1391</span>             <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>to_html5_video<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1392</span>         <span class="ansi-green-fg">elif</span> fmt <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#39;jshtml&#39;</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1393</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>to_jshtml<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1394</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1395</span> 
-
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/matplotlib/animation.py</span> in <span class="ansi-cyan-fg">to_jshtml</span><span class="ansi-blue-fg">(self, fps, embed_frames, default_mode)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1380</span>                                     embed_frames<span class="ansi-blue-fg">=</span>embed_frames<span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1381</span>                                     default_mode=default_mode)
-<span class="ansi-green-fg">-&gt; 1382</span><span class="ansi-red-fg">                 </span>self<span class="ansi-blue-fg">.</span>save<span class="ansi-blue-fg">(</span>str<span class="ansi-blue-fg">(</span>path<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> writer<span class="ansi-blue-fg">=</span>writer<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1383</span>                 self<span class="ansi-blue-fg">.</span>_html_representation <span class="ansi-blue-fg">=</span> path<span class="ansi-blue-fg">.</span>read_text<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1384</span> 
-
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/matplotlib/animation.py</span> in <span class="ansi-cyan-fg">save</span><span class="ansi-blue-fg">(self, filename, writer, fps, dpi, codec, bitrate, extra_args, metadata, extra_anim, savefig_kwargs, progress_callback)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1133</span>                 <span class="ansi-green-fg">for</span> anim <span class="ansi-green-fg">in</span> all_anim<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1134</span>                     <span class="ansi-red-fg"># Clear the initial frame</span>
-<span class="ansi-green-fg">-&gt; 1135</span><span class="ansi-red-fg">                     </span>anim<span class="ansi-blue-fg">.</span>_init_draw<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1136</span>                 frame_number <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span>
-<span class="ansi-green-intense-fg ansi-bold">   1137</span>                 <span class="ansi-red-fg"># TODO: Currently only FuncAnimation has a save_count</span>
-
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/matplotlib/animation.py</span> in <span class="ansi-cyan-fg">_init_draw</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1741</span>         <span class="ansi-red-fg"># artists.</span>
-<span class="ansi-green-intense-fg ansi-bold">   1742</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_init_func <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1743</span><span class="ansi-red-fg">             </span>self<span class="ansi-blue-fg">.</span>_draw_frame<span class="ansi-blue-fg">(</span>next<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>new_frame_seq<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1744</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1745</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/matplotlib/animation.py</span> in <span class="ansi-cyan-fg">_draw_frame</span><span class="ansi-blue-fg">(self, framedata)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1764</span>         <span class="ansi-red-fg"># Call the func with framedata and args. If blitting is desired,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1765</span>         <span class="ansi-red-fg"># func needs to return a sequence of any artists that were modified.</span>
-<span class="ansi-green-fg">-&gt; 1766</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_drawn_artists <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_func<span class="ansi-blue-fg">(</span>framedata<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>self<span class="ansi-blue-fg">.</span>_args<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1767</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_blit<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1768</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_drawn_artists <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-30-589c004b7032&gt;</span> in <span class="ansi-cyan-fg">draw_barchart</span><span class="ansi-blue-fg">(yearshow)</span>
-<span class="ansi-green-intense-fg ansi-bold">     38</span> 
-<span class="ansi-green-intense-fg ansi-bold">     39</span> 
-<span class="ansi-green-fg">---&gt; 40</span><span class="ansi-red-fg">     </span>records_currentyear<span class="ansi-blue-fg">=</span>records_selected<span class="ansi-blue-fg">[</span>records_selected<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;Year&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>eq<span class="ansi-blue-fg">(</span>yearshow<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sort_values<span class="ansi-blue-fg">(</span>by<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;TotalWins&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> ascending<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     41</span> 
-<span class="ansi-green-intense-fg ansi-bold">     42</span>     <span class="ansi-red-fg">#show leading bars top to bottom</span>
-
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">sort_values</span><span class="ansi-blue-fg">(self, by, axis, ascending, inplace, kind, na_position, ignore_index)</span>
-<span class="ansi-green-intense-fg ansi-bold">   4931</span> 
-<span class="ansi-green-intense-fg ansi-bold">   4932</span>             indexer = nargsort(
-<span class="ansi-green-fg">-&gt; 4933</span><span class="ansi-red-fg">                 </span>k<span class="ansi-blue-fg">,</span> kind<span class="ansi-blue-fg">=</span>kind<span class="ansi-blue-fg">,</span> ascending<span class="ansi-blue-fg">=</span>ascending<span class="ansi-blue-fg">,</span> na_position<span class="ansi-blue-fg">=</span>na_position
-<span class="ansi-green-intense-fg ansi-bold">   4934</span>             )
-<span class="ansi-green-intense-fg ansi-bold">   4935</span> 
-
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/pandas/core/sorting.py</span> in <span class="ansi-cyan-fg">nargsort</span><span class="ansi-blue-fg">(items, kind, ascending, na_position)</span>
-<span class="ansi-green-intense-fg ansi-bold">    261</span> 
-<span class="ansi-green-intense-fg ansi-bold">    262</span>     <span class="ansi-green-fg">if</span> is_extension_array_dtype<span class="ansi-blue-fg">(</span>items<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 263</span><span class="ansi-red-fg">         </span>items <span class="ansi-blue-fg">=</span> items<span class="ansi-blue-fg">.</span>_values_for_argsort<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    264</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    265</span>         items <span class="ansi-blue-fg">=</span> np<span class="ansi-blue-fg">.</span>asanyarray<span class="ansi-blue-fg">(</span>items<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/pandas/core/arrays/integer.py</span> in <span class="ansi-cyan-fg">_values_for_argsort</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    500</span>         &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">    501</span>         data <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_data<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">--&gt; 502</span><span class="ansi-red-fg">         </span>data<span class="ansi-blue-fg">[</span>self<span class="ansi-blue-fg">.</span>_mask<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> data<span class="ansi-blue-fg">.</span>min<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">1</span>
-<span class="ansi-green-intense-fg ansi-bold">    503</span>         <span class="ansi-green-fg">return</span> data
-<span class="ansi-green-intense-fg ansi-bold">    504</span> 
-
-<span class="ansi-green-fg">/srv/conda/envs/notebook/lib/python3.7/site-packages/numpy/core/_methods.py</span> in <span class="ansi-cyan-fg">_amin</span><span class="ansi-blue-fg">(a, axis, out, keepdims, initial, where)</span>
-<span class="ansi-green-intense-fg ansi-bold">     32</span> def _amin(a, axis=None, out=None, keepdims=False,
-<span class="ansi-green-intense-fg ansi-bold">     33</span>           initial=_NoValue, where=True):
-<span class="ansi-green-fg">---&gt; 34</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> umr_minimum<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span> axis<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> out<span class="ansi-blue-fg">,</span> keepdims<span class="ansi-blue-fg">,</span> initial<span class="ansi-blue-fg">,</span> where<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     35</span> 
-<span class="ansi-green-intense-fg ansi-bold">     36</span> def _sum(a, axis=None, dtype=None, out=None, keepdims=False,
-
-<span class="ansi-red-fg">ValueError</span>: zero-size array to reduction operation minimum which has no identity</pre>
+<span class="ansi-red-fg">NameError</span>: name &#39;yearstart&#39; is not defined</pre>
 </div>
-</div>
-
-<div class="output_area">
-
-    
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.animation.FuncAnimation at 0x7efc98ec2610&gt;</pre>
-</div>
-
 </div>
 
 <div class="output_area">
