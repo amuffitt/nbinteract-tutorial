@@ -14032,43 +14032,69 @@ memory usage: 575.7+ KB
 
 
 <span class="c1">#button widget to submit inputs to run chart</span>
-<span class="n">btn</span><span class="o">=</span><span class="n">wg</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
-   <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Run Chart&#39;</span><span class="p">,</span>
-   <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-   <span class="n">button_style</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1"># &#39;success&#39;, &#39;info&#39;, &#39;warning&#39;, &#39;danger&#39; or &#39;&#39;</span>
-   <span class="n">tooltip</span><span class="o">=</span><span class="s1">&#39;Click to Run Chart&#39;</span><span class="p">,</span>
-   <span class="n">icon</span><span class="o">=</span><span class="s1">&#39;check&#39;</span><span class="p">,</span> <span class="c1"># (FontAwesome names without the `fa-` prefix),</span>
-   <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">margin</span><span class="o">=</span><span class="s1">&#39;20px&#39;</span><span class="p">)</span>
+<span class="c1">#btn=wg.Button(</span>
+<span class="c1">#   description=&#39;Run Chart&#39;,</span>
+<span class="c1">#   disabled=False,</span>
+<span class="c1">#   button_style=&#39;&#39;, # &#39;success&#39;, &#39;info&#39;, &#39;warning&#39;, &#39;danger&#39; or &#39;&#39;</span>
+<span class="c1">#   tooltip=&#39;Click to Run Chart&#39;,</span>
+<span class="c1">#   icon=&#39;check&#39;, # (FontAwesome names without the `fa-` prefix),</span>
+<span class="c1">#   layout=Layout(margin=&#39;20px&#39;)</span>
+<span class="c1">#)</span>
+
+<span class="c1">#display(btn)</span>
+
+<span class="n">resultcheck</span><span class="o">=</span><span class="n">wg</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+    <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">layout</span><span class="o">=</span><span class="n">Layout</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="s1">&#39;30px&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="s1">&#39;500px&#39;</span><span class="p">),</span>
+    <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Show Result&#39;</span><span class="p">,</span>
+    <span class="n">disabled</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">indent</span><span class="o">=</span><span class="kc">False</span>
 <span class="p">)</span>
 
-<span class="n">display</span><span class="p">(</span><span class="n">btn</span><span class="p">)</span>
+<span class="c1">#function to create noanimate variable</span>
+<span class="c1">#def resultflag(e):</span>
+<span class="c1">#    global showresult</span>
+<span class="c1">#    showresult=e</span>
+    
 
 
 <span class="c1">#function for submit button to run - Sends to next cell to run animation or runs final chart result in current cell    </span>
-<span class="k">def</span> <span class="nf">run_all</span><span class="p">(</span><span class="n">btn_object</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;button pressed&#39;</span><span class="p">)</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">conf</span> <span class="o">!=</span> <span class="s1">&#39;None&#39;</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">run_all</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">showresult</span>
+    <span class="n">showresult</span><span class="o">=</span><span class="n">e</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">showresult</span><span class="o">==</span><span class="kc">True</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;yooo&#39;</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">conf</span> <span class="o">!=</span> <span class="s1">&#39;None&#39;</span><span class="p">):</span>
             <span class="k">global</span> <span class="n">useconf</span>
             <span class="n">useconf</span><span class="o">=</span><span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
+        <span class="k">else</span><span class="p">:</span>
             <span class="n">useconf</span><span class="o">=</span><span class="kc">False</span>
             
-    <span class="k">if</span> <span class="s1">&#39;yearstart&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter Start/Stop Years&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="s1">&#39;yearstop&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">():</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter Start/Stop Years&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="p">((</span><span class="n">yearstart</span><span class="o">==</span><span class="s1">&#39;Choose&#39;</span> <span class="ow">or</span> <span class="n">yearstop</span><span class="o">==</span><span class="s1">&#39;Choose&#39;</span><span class="p">)):</span>
-        <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Enter Start/Stop Years&#39;</span><span class="p">)</span>
-    <span class="k">elif</span><span class="p">(</span><span class="n">yearstart</span><span class="o">&gt;</span><span class="n">yearstop</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;End Year Cant Be Greater Than Start Year&#39;</span> <span class="p">)</span>
-    <span class="k">elif</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">team_list</span><span class="p">)</span> <span class="o">&lt;=</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">useconf</span><span class="o">==</span><span class="kc">False</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Select at least 2 teams of same sport(or de-select and re-select teams)&#39;</span><span class="p">)</span>
-    <span class="k">elif</span><span class="p">(</span><span class="n">noanimate</span><span class="o">==</span><span class="kc">False</span><span class="p">):</span>
-        <span class="n">display</span><span class="p">(</span><span class="n">Javascript</span><span class="p">(</span><span class="s1">&#39;IPython.notebook.execute_cell_range(IPython.notebook.get_selected_index()+1, IPython.notebook.ncells())&#39;</span><span class="p">))</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">noanimation</span><span class="p">()</span>
+        <span class="k">if</span> <span class="s1">&#39;yearstart&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter Start/Stop Years&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="s1">&#39;yearstop&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Enter Start/Stop Years&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="p">((</span><span class="n">yearstart</span><span class="o">==</span><span class="s1">&#39;Choose&#39;</span> <span class="ow">or</span> <span class="n">yearstop</span><span class="o">==</span><span class="s1">&#39;Choose&#39;</span><span class="p">)):</span>
+            <span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;Enter Start/Stop Years&#39;</span><span class="p">)</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">yearstart</span><span class="o">&gt;</span><span class="n">yearstop</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;End Year Cant Be Greater Than Start Year&#39;</span> <span class="p">)</span>
+        <span class="k">elif</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">team_list</span><span class="p">)</span> <span class="o">&lt;=</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">useconf</span><span class="o">==</span><span class="kc">False</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Select at least 2 teams of same sport(or de-select and re-select teams)&#39;</span><span class="p">)</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">noanimate</span><span class="o">==</span><span class="kc">False</span><span class="p">):</span>
+            <span class="n">display</span><span class="p">(</span><span class="n">Javascript</span><span class="p">(</span><span class="s1">&#39;IPython.notebook.execute_cell_range(IPython.notebook.get_selected_index()+1, IPython.notebook.ncells())&#39;</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">noanimation</span><span class="p">()</span>
         
-<span class="n">btn</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">run_all</span><span class="p">)</span>
+<span class="c1">#Default to not show result</span>
+<span class="n">run_all</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    
+<span class="c1">#pass dropdown value to set variable      </span>
+<span class="n">wg</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">run_all</span><span class="p">,</span><span class="n">e</span><span class="o">=</span><span class="n">resultcheck</span><span class="p">)</span>
+
+<span class="c1">#display(HBox([resultcheck]))</span>
+
+
+<span class="c1">#btn.on_click(run_all)</span>
 </pre></div>
 
     </div>
@@ -14216,6 +14242,18 @@ memory usage: 575.7+ KB
       Loading widgets...
     </button>
   </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;function __main__.run_all(e)&gt;</pre>
+</div>
 
 </div>
 
