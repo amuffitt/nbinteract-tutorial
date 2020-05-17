@@ -4,3 +4,4 @@ nbinteract
 matplotlib
 pandas
 xlrd
+ipympl
