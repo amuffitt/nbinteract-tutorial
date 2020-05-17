@@ -4,6 +4,5 @@ nbinteract
 matplotlib
 pandas
 xlrd
-collections
 HTML
 defaultdict
