@@ -5,3 +5,4 @@ matplotlib
 pandas
 xlrd
 ipympl
+jupyter labextension install @jupyter-widgets/jupyterlab-manager jupyter-matplotlib
