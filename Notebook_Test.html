@@ -14056,7 +14056,9 @@ memory usage: 575.7+ KB
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;jjj&quot;</span><span class="p">)</span>
     <span class="c1">#display(HTML(animator.to_jshtml()))</span>
     <span class="c1">#plt.show()</span>
-    <span class="n">display</span><span class="p">(</span><span class="n">animator</span><span class="p">)</span>
+    <span class="c1">#display(HTML(ani.to_jshtml(default_mode=&#39;reflect&#39;)))</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">animator</span><span class="o">.</span><span class="n">to_jshtml</span><span class="p">(</span><span class="n">default_mode</span><span class="o">=</span><span class="s1">&#39;reflect&#39;</span><span class="p">)))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
         
 <span class="c1">#btn2=wg.Button(</span>
