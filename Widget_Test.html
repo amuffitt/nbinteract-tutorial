@@ -13188,6 +13188,165 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Team</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Ties</th>
+      <th>Sport</th>
+      <th>Conf</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1960</td>
+      <td>Air Force Falcons</td>
+      <td>4.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF Indep</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1961</td>
+      <td>Air Force Falcons</td>
+      <td>3.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF Indep</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1962</td>
+      <td>Air Force Falcons</td>
+      <td>5.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF Indep</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1963</td>
+      <td>Air Force Falcons</td>
+      <td>7.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF Indep</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1964</td>
+      <td>Air Force Falcons</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>1.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF Indep</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>10519</th>
+      <td>2015</td>
+      <td>Wyoming Cowboys</td>
+      <td>2.0</td>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF MWC</td>
+    </tr>
+    <tr>
+      <th>10520</th>
+      <td>2016</td>
+      <td>Wyoming Cowboys</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF MWC</td>
+    </tr>
+    <tr>
+      <th>10521</th>
+      <td>2017</td>
+      <td>Wyoming Cowboys</td>
+      <td>8.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF MWC</td>
+    </tr>
+    <tr>
+      <th>10522</th>
+      <td>2018</td>
+      <td>Wyoming Cowboys</td>
+      <td>6.0</td>
+      <td>6.0</td>
+      <td>0.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF MWC</td>
+    </tr>
+    <tr>
+      <th>10523</th>
+      <td>2019</td>
+      <td>Wyoming Cowboys</td>
+      <td>8.0</td>
+      <td>5.0</td>
+      <td>0.0</td>
+      <td>NCAA Football</td>
+      <td>NCAAF MWC</td>
+    </tr>
+  </tbody>
+</table>
+<p>10524 rows × 7 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
   </div>
 
   
@@ -13202,6 +13361,36 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 10524 entries, 0 to 10523
+Data columns (total 7 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   Year    10524 non-null  int64  
+ 1   Team    10524 non-null  object 
+ 2   Wins    10522 non-null  float64
+ 3   Losses  10522 non-null  float64
+ 4   Ties    7458 non-null   float64
+ 5   Sport   10524 non-null  object 
+ 6   Conf    10524 non-null  object 
+dtypes: float64(3), int64(1), object(3)
+memory usage: 575.7+ KB
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13812,7 +14001,6 @@ div#notebook {
 <span class="k">def</span> <span class="nf">noanimation</span><span class="p">():</span>
         
     <span class="k">global</span> <span class="n">fig</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span>
     <span class="k">global</span> <span class="n">ax</span>
     <span class="k">if</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">team_list</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">7</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">useconf</span><span class="o">==</span><span class="kc">False</span><span class="p">)):</span>
         <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span> 
@@ -13847,7 +14035,6 @@ div#notebook {
 
     <span class="c1">#adjusting figure size based on # of teams to show in chart</span>
     <span class="k">global</span> <span class="n">fig</span>
-    <span class="n">fig</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">canvas</span>
     <span class="k">global</span> <span class="n">ax</span>
     <span class="k">if</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">team_list</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">7</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">useconf</span><span class="o">==</span><span class="kc">False</span><span class="p">)):</span>
         <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span> 
@@ -13867,8 +14054,10 @@ div#notebook {
     <span class="n">use_anim</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;jjj&quot;</span><span class="p">)</span>
     <span class="c1">#display(HTML(animator.to_jshtml()))</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="c1">#plt.show()</span>
     <span class="c1">#display(animator)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     
         
 <span class="c1">#btn2=wg.Button(</span>
@@ -13966,6 +14155,165 @@ div#notebook {
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;function __main__.run_all(e)&gt;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
