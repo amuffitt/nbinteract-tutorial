@@ -13603,14 +13603,17 @@ div#notebook {
     <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
 
-<span class="k">def</span> <span class="nf">run_all</span><span class="p">(</span><span class="n">btn</span><span class="p">):</span>
-    <span class="n">showanim</span><span class="p">()</span>
+<span class="c1">#def run_all(btn):</span>
+ <span class="c1">#   showanim()</span>
+    
+<span class="k">def</span> <span class="nf">pr_test</span><span class="p">(</span><span class="n">btn</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ClickClick&quot;</span><span class="p">)</span>
 
 <span class="n">display</span><span class="p">(</span><span class="n">btn</span><span class="p">)</span>
 
 <span class="c1">#wg.interact(run_all,e=resultcheck)</span>
 
-<span class="n">btn</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">run_all</span><span class="p">)</span>
+<span class="n">btn</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">pr_test</span><span class="p">)</span>
     
 <span class="c1">#run_all()</span>
 </pre></div>
@@ -13635,6 +13638,16 @@ div#notebook {
     </button>
   </div>
 
+</div>
+
+<div class="output_area">
+
+    
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>ClickClick
+</pre>
+</div>
 </div>
 
 </div>
