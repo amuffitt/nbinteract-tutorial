@@ -1,9 +1,9 @@
 numpy
-ipywidgets==7.5
+ipywidgets
 nbinteract
 matplotlib
 pandas
 xlrd
 nodejs
-ipympl==0.5.3
+ipympl
 
