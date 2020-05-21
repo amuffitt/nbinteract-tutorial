@@ -5,5 +5,5 @@ matplotlib
 pandas
 xlrd
 nodejs
-ipympl==0.5.4
+ipympl==0.5.3
 
