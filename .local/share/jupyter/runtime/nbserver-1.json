@@ -1,11 +1,11 @@
 {
-  "base_url": "/binder/jupyter/user/amuffitt-nbinteract-tutorial-bbkgiiaa/",
+  "base_url": "/user/amuffitt-nbinteract-tutorial-y6j8q6l2/",
   "hostname": "0.0.0.0",
   "notebook_dir": "/home/jovyan",
   "password": false,
   "pid": 1,
   "port": 8888,
   "secure": false,
-  "token": "XazlunKqSGqJWTaSmZiekA",
-  "url": "http://0.0.0.0:8888/binder/jupyter/user/amuffitt-nbinteract-tutorial-bbkgiiaa/"
+  "token": "9O8VYwkCTUanGoh2LfyCJA",
+  "url": "http://0.0.0.0:8888/user/amuffitt-nbinteract-tutorial-y6j8q6l2/"
 }
